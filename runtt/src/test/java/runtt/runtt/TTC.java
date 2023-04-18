@@ -1,6 +1,10 @@
 package runtt.runtt;
 
+import static org.testng.Assert.assertEquals;
+
 import org.testng.annotations.Test;
+
+import dev.failsafe.internal.util.Assert;
 
 public class TTC extends BaseClass {
 
@@ -29,6 +33,10 @@ public class TTC extends BaseClass {
 	@Test(priority = 4)
 	public void test4() {
 		pp.addCountries().click();
+	}
+	@Test(priority = 5)
+	public void test5() {
+		assertEquals(pp.headingmain().getText(), "Add City");
 	}
 
 }
