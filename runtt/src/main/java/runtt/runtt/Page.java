@@ -50,4 +50,11 @@ public class Page extends BaseClass {
 	public WebElement addCountries() {
 		return addCountry;
 	}
+
+	@FindBy(xpath = "//div[text()='Add Country']")
+	private WebElement heading;
+
+	public WebElement headingmain() {
+		return heading;
+	}
 }
